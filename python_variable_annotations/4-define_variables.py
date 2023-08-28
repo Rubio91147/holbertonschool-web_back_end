@@ -11,4 +11,4 @@ school, a string with a value of “Holberton”'''
 a: int = 1
 pi: float = 3.14
 i_understand_annotation: bool = True
-school: str = "holberton"
+school: str = "Holberton"
