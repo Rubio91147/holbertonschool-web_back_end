@@ -1,2 +1,1 @@
-# holbertonschool-web_back_end
-tipado python
+Python - Variable Annotations
