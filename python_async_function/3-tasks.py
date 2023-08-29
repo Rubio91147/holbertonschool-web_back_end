@@ -22,6 +22,7 @@ def task_wait_random(max_delay):
 
 async def test(max_delay: int):
     task = task_wait_random(max_delay)
+    """ Tasks """
     await task
     print(task.__class__)
     asyncio.run(test(5))
