@@ -7,22 +7,10 @@ max_delay and returns a asyncio.Task.'''
 
 
 import asyncio
-import random
+wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def wait_random(max_delay=10):
-    delay = random.uniform(0, max_delay)
-    await asyncio.sleep(delay)
-    return delay
-
-
-def task_wait_random(max_delay):
-    return asyncio.create_task(wait_random(max_delay))
-
-
-async def test(max_delay: int):
-    task = task_wait_random(max_delay)
+def task_wait_random(max_delay: int) -> asyncio.Task:
     """ Tasks """
-    await task
-    print(task.__class__)
-    asyncio.run(test(5))
+    task = asyncio.create_task(wait_random(max_delay))
+    return task
